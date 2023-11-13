@@ -1,0 +1,3 @@
+docker run --name play-hangman -it -v $(pwd):/code openjdk:11 bash
+# to launch docker start and docker exec -it play-hangman bash
+
