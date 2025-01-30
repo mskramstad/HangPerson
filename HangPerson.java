@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class HangPerson {
 
-	// use the following global variables for the program
+    // use the following global variables for the program
     String word;
     String wordStatus;
 
@@ -16,27 +16,22 @@ public class HangPerson {
     Scanner user_input;
 
     public void start() {
-        System.out.println("Welcome to Hangperson");
-        System.out.println();
-        System.out.println("The rules are simple.. You know the drill. Guess the word before time runs out.");
-        System.out.println();
-        System.out.println("Choosing word....");
-
         setup();
 
         run();
 
     }
-
-
-    public void setup() {
+	
+    public void setupVariables() {
     // the following method should call the setupRandomWord method and set up any variables.
-    word = getRandomWord();
 
-    // used to create a copy of the word to track how many letters are found.
-    // for alphabet the word status would be a___ab_t
+    // create a copy of the word to track how many letters are found.
+    // for the word alphabet status would be a___ab_t
 
-    setupWordStatus();
+    }
+
+    public void displayDirections() {
+    // this method displays the rules of the game to the user
 
     }
 
@@ -49,32 +44,27 @@ public class HangPerson {
     // A final output when games ends.
     
 
-        //output result based on whether all letters guessed or five misses
+    //output result based on whether all letters guessed or five misses
 
     }
 
     private void setupWordStatus() {
-      String ws = "";
-      for (int i=0; i < word.length(); i ++) {
-          ws += "_";
-      }
-      wordStatus = ws;
+    // this method initializes a variable wordStatus to keeps track of letters correctly guessed in the word a___a___
+   
     }
 
     private String displayCurrentStatus() {
-
-      String newStr ="";
-
-      for (int i =0; i < wordStatus.length(); i ++) {
-        newStr += wordStatus.charAt(i);
-        newStr += " ";
-      }
-      return newStr;
+    // this method returns a string of the letters currectly guessed by displaying wordStatus with spaces between each letter
+    return newStr;
+    }
+	
+    private int countCorrect(char c) {
+    // this returns how many times letter guess exists in the word
+    return count;
     }
 
-    private static boolean checkGuessedLetter(char c) {
+    private boolean checkGuessedLetter(char c) {
     // the following method checks to see if the letter has been guessed yet and returns true if yes and false if not.
-        
     return false;
     }
 
@@ -89,7 +79,6 @@ public class HangPerson {
         // 2) what letters the user has already guessed, and
     	// 3) the current status of the word 
 
-
     }
 
     public String getRandomWord() {
@@ -98,6 +87,19 @@ public class HangPerson {
         return "alphabet";
     }
 
+    public String replaceCharInWord(String word, char c, index i) { 
+    // this method replaces a specific character in a string with a different letter (for replacing the correctly guessed letters)
+
+    return newStr;
+    }
+
+    public String getLetter() {
+    // this method asks the user to guess a letter and returns the letter guessed
+    }
+
+    public boolean guessWord(String w) {
+    // this method asks the user to guess the word and compares it to the word and returns true or false
+    }
 
     private void showHangman(int inc) {
     	// displays the current hangman. Five wrong guesses and man is hanged and game ends.
