@@ -16,9 +16,19 @@ public class HangPerson {
     Scanner user_input;
 
     public void start() {
-        setup();
-
         run();
+
+    }
+	
+    public void run() {
+    setupVariables();
+    // the main program should include the following: 
+    // 1) a while loop that keeps the user guessed letters until all
+    // letters of the word are guessed. or the user makes too many incorrect guesses.
+    // If a letter is found, all instances of the letter are shown in the word.  
+    // if an incorrect guess is made, the new hangman is shown.  Give feedback after every guess.
+    // A final output when games ends.
+    //output result based on whether all letters guessed or five misses
 
     }
 	
@@ -29,43 +39,15 @@ public class HangPerson {
     // for the word alphabet status would be a___ab_t
 
     }
-
-    public void displayDirections() {
-    // this method displays the rules of the game to the user
-
-    }
-
-    public void run() {
-    // the main program should include the following: 
-    // 1) a while loop that keeps the user guessed letters until all
-    // letters of the word are guessed. or the user makes too many incorrect guesses.
-    // If a letter is found, all instances of the letter are shown in the word.  
-    // if an incorrect guess is made, the new hangman is shown.  Give feedback after every guess.
-    // A final output when games ends.
-    
-
-    //output result based on whether all letters guessed or five misses
-
-    }
-
+	
     private void setupWordStatus() {
     // this method initializes a variable wordStatus to keeps track of letters correctly guessed in the word a___a___
    
     }
-
-    private String displayCurrentStatus() {
-    // this method returns a string of the letters currectly guessed by displaying wordStatus with spaces between each letter
-    return newStr;
-    }
 	
-    private int countCorrect(char c) {
-    // this returns how many times letter guess exists in the word
-    return count;
-    }
+    public void displayDirections() {
+    // this method displays the rules of the game to the user
 
-    private boolean checkGuessedLetter(char c) {
-    // the following method checks to see if the letter has been guessed yet and returns true if yes and false if not.
-    return false;
     }
 
     public void showStatus() {
@@ -79,6 +61,21 @@ public class HangPerson {
         // 2) what letters the user has already guessed, and
     	// 3) the current status of the word 
 
+    }
+	
+    private String displayWordStatus() {
+    // this method returns a string of the letters correctly guessed by displaying wordStatus with spaces between each letter
+    return newStr;
+    }
+	
+    private int countCorrect(char c) {
+    // this returns how many times letter guess exists in the word
+    return count;
+    }
+
+    private boolean checkGuessedLetter(char c) {
+    // the following method checks to see if the letter has been guessed yet and returns true if yes and false if not.
+    return false;
     }
 
     public String getRandomWord() {
@@ -101,8 +98,8 @@ public class HangPerson {
     // this method asks the user to guess the word and compares it to the word and returns true or false
     }
 
-    private void showHangman(int inc) {
-    	// displays the current hangman. Five wrong guesses and man is hanged and game ends.
+    private void showHangPerson(int inc) {
+    	// displays the current hangPerson. Five wrong guesses and person is hanged and game ends.
 
         switch (inc) {
             case 0:
