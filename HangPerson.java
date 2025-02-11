@@ -21,6 +21,7 @@ public class HangPerson {
     }
 	
     public void run() {
+    System.out.println("working!");
     setupVariables();
     // the main program should include the following: 
     // 1) a while loop that keeps the user guessed letters until all
@@ -64,11 +65,13 @@ public class HangPerson {
     }
 	
     private String displayWordStatus() {
-    // this method returns a string of the letters correctly guessed by displaying wordStatus with spaces between each letter
+    String newStr = "";
+	    // this method returns a string of the letters correctly guessed by displaying wordStatus with spaces between each letter
     return newStr;
     }
 	
     private int countCorrect(char c) {
+    int count = 0;
     // this returns how many times letter guess exists in the word
     return count;
     }
@@ -84,18 +87,23 @@ public class HangPerson {
         return "alphabet";
     }
 
-    public String replaceCharInWord(String word, char c, index i) { 
+    public String replaceCharInWord(String word, char c, int index) { 
+    String newStr = "";
     // this method replaces a specific character in a string with a different letter (for replacing the correctly guessed letters)
 
     return newStr;
     }
 
     public String getLetter() {
+    String ch = "";
     // this method asks the user to guess a letter and returns the letter guessed
+    return ch;
     }
 
     public boolean guessWord(String w) {
+    String word = "";
     // this method asks the user to guess the word and compares it to the word and returns true or false
+    return word;
     }
 
     private void showHangPerson(int inc) {
